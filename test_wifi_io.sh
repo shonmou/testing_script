@@ -40,6 +40,12 @@ func_init
 
 while :
 	do
+		if [ `expr $count % 2` -eq 0 ]; then
+			target='0x87654321';
+		else
+			target='0x12345678';
+		fi
+
 		func_write_pattern_test
 		func_read_result ret_val
 		echo "read back: "$ret_val
