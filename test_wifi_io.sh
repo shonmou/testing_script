@@ -4,6 +4,8 @@ count=0
 
 func_init()
 {
+	$(adb root)
+	sleep 1
 	$(adb shell rmmod 8723ds.ko)
 	sleep 1
 	$(adb shell insmod /misc/modules/8723ds.ko)
